@@ -6,6 +6,7 @@ import About from './pages/about'
 import Products from './pages/products'
 import Contact from './pages/contact'
 import Map from './pages/contact/Map'
+import NotFound from './components/NotFound'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
             <Route path='map' element={<Map />}></Route>
           </Route>
         </Route>
+        <Route path='*' element={<NotFound />}></Route>
       </Routes>
     </div>
   )
