@@ -10,17 +10,16 @@ import Map from './pages/contact/Map'
 const App = () => {
   return (
     <div>
-      <Layout>
-        <Routes>
+      <Routes>
+        <Route element={<Layout />}>
           <Route path='/' element={<Home />}></Route>
-          <Route path='/about' element={<About />}></Route>
-          <Route path='/products' element={<Products />}></Route>
-          <Route path='/contact' element={<Contact />}>
+          <Route path='about' element={<About />}></Route>
+          <Route path='products' element={<Products />}></Route>
+          <Route path='contact' element={<Contact />}>
             <Route path='map' element={<Map />}></Route>
           </Route>
-        </Routes>
-      </Layout>
-
+        </Route>
+      </Routes>
     </div>
   )
 }
