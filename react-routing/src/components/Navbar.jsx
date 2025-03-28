@@ -1,8 +1,14 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, replace, useNavigate } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 
 const Navbar = () => {
+    const navigate = useNavigate();
+
+    const buttonHandler = () => {
+        navigate('/contact', { replace: true });
+    }
+
     return (
         <div className='container w-full flex flex-row justify-between items-center px-[8%] py-[15px]'>
             <span><Link to='/'><img className='w-[131.825px] h-auto' src={logo} alt="React Router Logo" /></Link></span>
@@ -12,7 +18,7 @@ const Navbar = () => {
                 <li className='mx-[10px] px-[10px] text-black'><NavLink to='/products'>Products</NavLink></li>
                 <li className='mx-[10px] px-[10px] text-black'><NavLink to='/contact'>Contact</NavLink></li>
             </ul>
-            <button className='bg-black text-white py-[8px] px-[25px] border-0 outline-0 rounded-[30px] text-[16px] cursor-pointer'>Get Started</button>
+            <button className='bg-black text-white py-[8px] px-[25px] border-0 outline-0 rounded-[30px] text-[16px] cursor-pointer' onClick={buttonHandler}>Get Started</button>
         </div>
     )
 }

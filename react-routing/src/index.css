@@ -4,3 +4,8 @@
 * {
     font-family: "Outfit", sans-serif;
 }
+
+.active {
+    color: #F44250;
+    font-weight: 600;
+}
