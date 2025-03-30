@@ -17,6 +17,7 @@ const Navbar = () => {
                 <li className='mx-[10px] px-[10px] text-black'><NavLink to='about'>About</NavLink></li>
                 <li className='mx-[10px] px-[10px] text-black'><NavLink to='products'>Products</NavLink></li>
                 <li className='mx-[10px] px-[10px] text-black'><NavLink to='contact'>Contact</NavLink></li>
+                <li className='mx-[10px] px-[10px] text-black'><NavLink to='jobs'>Jobs</NavLink></li>
             </ul>
             <button className='bg-black text-white py-[8px] px-[25px] border-0 outline-0 rounded-[30px] text-[16px] cursor-pointer' onClick={buttonHandler}>Get Started</button>
         </div>
