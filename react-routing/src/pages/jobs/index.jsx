@@ -3,6 +3,9 @@ import { Link, useLoaderData } from 'react-router-dom'
 
 export const jobData = async () => {
     const res = await fetch("http://localhost:5000/jobs");
+    if (!res.ok) {
+        throw Error("Could not found the job list");
+    }
     return await res.json();
 }
 

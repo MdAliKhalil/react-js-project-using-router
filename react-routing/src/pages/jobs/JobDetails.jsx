@@ -4,6 +4,9 @@ import { useLoaderData } from 'react-router-dom';
 export const jobDetailsLoader = async ({ params }) => {
     const { id } = params;
     const res = await fetch('http://localhost:5000/jobs/' + id);
+    if (!res.ok) {
+        throw Error("Could not found the job details");
+    }
     return res.json();
 }
 
@@ -20,7 +23,7 @@ const JobDetails = () => {
                 designers and other developers to bring innovative web solutions to life. Your expertise will play a crucial role
                 in enhancing our online presence and creating engaging user experiences.</p>
             <div>
-                <button className='bg-black text-white py-[8px] px-[25px] border-0 outline-0 rounded-[30px] text-[16px] cursor-pointer'>Apply Now</button>
+                <button className='bg-black text-white py-[8px] px-[25px] border-0 outline-0 text-[16px] cursor-pointer'>Apply Now</button>
             </div>
         </div>
     )
